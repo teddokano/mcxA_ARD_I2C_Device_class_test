@@ -11,7 +11,7 @@ r01lib_start;	/* *** place this word before making instance of r01lib classes **
 #include	"test_LM75B.h"
 
 
-I2C			i2c;
+I2C			i2c( I2C_SDA, I2C_SCL );
 test_LM75B	sensor( i2c, 0x4C );
 
 int main(void)
